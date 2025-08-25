@@ -80,7 +80,6 @@
     <Build Include="adm\Stored Procedures\spProcessEvent.sql" />
     <Build Include="adm\Stored Procedures\spReportLog.sql" />
     <Build Include="adm\Stored Procedures\spReportLogFP.sql" />
-    <Build Include="dbo\Stored Procedures\spForDel.sql" />
     <Build Include="dbo\Stored Procedures\spProcRename777.sql" />
     <Build Include="Database Triggers\trEventsLog.sql" />
     <Build Include="Security\adm.sql" />
