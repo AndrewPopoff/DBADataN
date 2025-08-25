@@ -1,0 +1,31 @@
+﻿
+CREATE TRIGGER [trEventsLog] ON DATABASE
+WITH EXECUTE AS CALLER
+FOR
+    DDL_TABLE_EVENTS,
+    DDL_VIEW_EVENTS,
+    RENAME,
+    DDL_PROCEDURE_EVENTS,
+    DDL_FUNCTION_EVENTS
+  --CREATE_TABLE,
+  --ALTER_TABLE,
+  --DROP_TABLE,
+  --CREATE_VIEW,
+  --ALTER_VIEW,
+  --DROP_VIEW
+AS
+BEGIN
+    SET NOCOUNT ON;
+    BEGIN TRY
+        DECLARE @Eventdata XML;
+        SET @Eventdata = EVENTDATA();
+        EXEC adm.spProcessEvent @Eventdata;
+    END TRY
+    BEGIN CATCH
+        SET @Eventdata= NULL;
+    END CATCH
+END
+GO
+DISABLE TRIGGER [trEventsLog]
+    ON DATABASE;
+

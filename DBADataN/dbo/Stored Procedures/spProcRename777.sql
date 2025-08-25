@@ -1,0 +1,5 @@
+﻿CREATE PROCEDURE [spProcRename777]
+AS
+BEGIN
+    SELECT 3
+END

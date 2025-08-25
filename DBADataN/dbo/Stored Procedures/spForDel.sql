@@ -1,0 +1,5 @@
+﻿CREATE PROCEDURE spForDel
+AS
+BEGIN
+    SELECT 1 
+END
