@@ -82,5 +82,6 @@
     <Build Include="adm\Stored Procedures\spReportLogFP.sql" />
     <Build Include="Database Triggers\trEventsLog.sql" />
     <Build Include="Security\adm.sql" />
+    <Build Include="dbo\Functions\spSomeProc.sql" />
   </ItemGroup>
 </Project>
